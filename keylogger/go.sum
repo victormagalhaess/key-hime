@@ -1,0 +1,6 @@
+github.com/AllenDang/w32 v0.0.0-20180428130237-ad0a36d80adc h1:w3fW4b1hPf6/cfdQQ/vu9V8eBeQmuLZIaUMj81nIzYQ=
+github.com/AllenDang/w32 v0.0.0-20180428130237-ad0a36d80adc/go.mod h1:1rHKulT5eD2DzdKxDXUZRKtBfkTzLmTL42ZmEmOfyrs=
+github.com/MarinX/keylogger v0.0.0-20210528193429-a54d7834cc1a h1:ItKXWegGGThcahUf+ylKFa5pwqkRJofaOyeGdzwO2mM=
+github.com/MarinX/keylogger v0.0.0-20210528193429-a54d7834cc1a/go.mod h1:aKzZ7D15UvH5LboXkeLmcNi+s/f805vUfB+BfW1fqd4=
+github.com/victormagalhaess/log2u v1.1.0 h1:l0TbFgQHJPYkgrg2ecy741eywuSNua6CJWRbkMR3ETo=
+github.com/victormagalhaess/log2u v1.1.0/go.mod h1:x91eSf6h90sc5dExplCCnYyrhphYVH6QBZuF+xw9/xU=

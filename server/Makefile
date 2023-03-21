@@ -1,5 +1,5 @@
 TESTS?=$$(go list ./... | egrep -v "mock|docs")
-BINARY=go_api_template
+BINARY=klggerserver
 ENTRY=main.go
 PORT=8080
 
@@ -36,18 +36,18 @@ docs:
 #dockerized commands
 
 docker/build:
-	docker build -t go_api_template .
+	docker build -t klggerserver .
 
 docker/build-test:
-	docker build -t go_api_template_test . -f Dockerfile.test
+	docker build -t klggerserver_test . -f Dockerfile.test
 
 docker/run: docker/build
-	docker run -e PORT=$(PORT) --rm --name go_api_template  -p $(PORT):$(PORT) go_api_template
+	docker run -e PORT=$(PORT) --rm --name klggerserver  -p $(PORT):$(PORT) klggerserver
 
 .PHONY: docker/clean
 docker/clean:
-	docker rmi -f go_api_template
-	docker rmi -f go_api_template_test
+	docker rmi -f klggerserver
+	docker rmi -f klggerserver_test
 	
 docker/test: docker/build-test
-	docker run --rm --name go_api_template_test go_api_template_test go test -v $(TESTS) -failfast
+	docker run --rm --name klggerserver_test klggerserver_test go test -v $(TESTS) -failfast
